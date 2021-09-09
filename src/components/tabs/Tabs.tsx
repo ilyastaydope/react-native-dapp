@@ -13,8 +13,6 @@ const Tabs = () => {
   const tabs = useSelector(({tabReducer}: any) => tabReducer);
   const [currentKey, setCurrentKey] = useState<any>('1');
   const offsetLeft = useRef(new Animated.Value(0)).current;
-  const activeTab = useSelector(({ tabReducer }: any)  => tabReducer  )
-  console.log(activeTab);
   const animation = () => {
     const keys = Object.keys(tabs);
     const index = keys.length ? keys.indexOf(currentKey) : 0;
